@@ -68,7 +68,7 @@ class TestVarasto(unittest.TestCase):
         self.assertAlmostEqual(self.varasto.paljonko_mahtuu(), 10)
 
     def test_palautus(self):
-        self.varasto.lisaa_varastoon(9)
+        self.varasto.lisaa_varastoon(8)
         tulos = "saldo = 8, vielä tilaa 2"
         self.assertAlmostEqual(str(self.varasto), tulos)
         
