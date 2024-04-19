@@ -13,7 +13,17 @@ def main():
     mehu_setterit(mehua)
     virhe1()
     lisays_virhe(mehua, olutta)
-    ota_virhe(mehua, olutta)
+    olutvarasto(olutta)
+    print("olutta.ota_varastosta(1000.0)")
+    saatiin = olutta.ota_varastosta(1000.0)
+    print(f"saatiin {saatiin}")
+    olutvarasto(olutta)
+
+    mehuvarasto(mehua)
+    print("mehua.otaVarastosta(-32.9)")
+    saatiin = mehua.ota_varastosta(-32.9)
+    print(f"saatiin {saatiin}")
+    mehuvarasto(mehua)
 
 
 def mehuvarasto(mehua):
@@ -58,18 +68,7 @@ def lisays_virhe(mehua, olutta):
     mehua.lisaa_varastoon(-666.0)
     mehuvarasto(mehua)
 
-def ota_virhe(mehua, olutta):
-    olutvarasto(olutta)
-    print("olutta.ota_varastosta(1000.0)")
-    saatiin = olutta.ota_varastosta(1000.0)
-    print(f"saatiin {saatiin}")
-    olutvarasto(olutta)
 
-    mehuvarasto(mehua)
-    print("mehua.otaVarastosta(-32.9)")
-    saatiin = mehua.ota_varastosta(-32.9)
-    print(f"saatiin {saatiin}")
-    mehuvarasto(mehua)
 
 if __name__ == "__main__":
     main()
