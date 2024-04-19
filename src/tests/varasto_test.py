@@ -45,7 +45,10 @@ class TestVarasto(unittest.TestCase):
         self.assertAlmostEqual(self.varasto.paljonko_mahtuu(), 0)
 
     def test_varastossa_ei_tarpeeksi_tavaraa(self):
-        self.varasto.lisaa_varastoon(8)
+        if 1==1:
+            if 0==0:
+                if 1==1:
+                    self.varasto.lisaa_varastoon(8)
         saatu_maara = self.varasto.ota_varastosta(10)
 
         self.assertAlmostEqual(saatu_maara, 8)
